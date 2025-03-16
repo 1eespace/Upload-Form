@@ -93,8 +93,8 @@ const DropFileInput = (props) => {
   };
 
   return (
-    <div className="upload-container">
-      <h2 className="upload-title">Upload Hub</h2>
+    <div className="upload-form-container">
+      <h2 className="form-name">Upload Hub</h2>
       <div
         ref={wrapperRef}
         className="drop-file"
@@ -144,7 +144,7 @@ const DropFileInput = (props) => {
 
       {fileList.length > 0 && (
         <>
-          <p className="drop-file-preview__title">Uploaded</p>
+          <p className="drop-file-preview__text">Uploaded</p>
           <div className="drop-file-preview">
             {fileList.map((item, index) => (
               <div key={index} className="drop-file-preview__item">
@@ -175,8 +175,6 @@ const DropFileInput = (props) => {
             borderRadius: '10px',
             cursor: 'pointer',
           }}
-          onMouseOver={(e) => (e.target.style.backgroundColor = '#4b00c0')}
-          onMouseOut={(e) => (e.target.style.backgroundColor = '#6200ea')}
           onClick={() => uploadFilesToBackend(fileList)}
         >
           UPLOAD FILES

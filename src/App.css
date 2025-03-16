@@ -4,8 +4,13 @@
   --body-bg: #f4f9fb;
   --box-bg: #fff;
   --input-bg: #f5f8ff;
+  --input-border: #3c6ba1;
   --txt-color: #201e20;
   --txt-second-color: #918f8f;
+  --progress-bar: #6200ea;
+  --browse-txt-color: blue;
+  --error-message: #ba2626;
+  --element-grey-color: #0000000d;
 }
 
 * {
@@ -18,10 +23,8 @@ body {
   font-family: 'Roboto Mono', sans-serif;
   background-color: var(--body-bg);
   color: var(--txt-color);
-  font-weight: 400;
   line-height: 1.5;
   display: flex;
-  align-items: flex-start;
   justify-content: center;
   height: 100vh;
   padding-top: 100px;
@@ -31,5 +34,5 @@ body {
   background-color: var(--box-bg);
   padding: 30px;
   border-radius: 20px;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  box-shadow: var(--element-grey-color) 0px 8px 24px;
 }

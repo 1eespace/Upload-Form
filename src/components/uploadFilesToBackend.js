@@ -1,4 +1,9 @@
 const uploadFilesToBackend = async (fileList) => {
+  // console.log("📂 Uploading Files:", fileList);
+  // fileList.forEach((file, index) => {
+  //   console.log(`📎 File ${index + 1}:`, file.name, file.type, file.size);
+  // });
+
   const formData = new FormData();
   formData.append('user', 1);
 
@@ -7,20 +12,23 @@ const uploadFilesToBackend = async (fileList) => {
   });
 
   try {
-    const response = await fetch('https://postman-echo.com/post', {
-      method: 'POST',
-      headers: {
-        Authorization: 'Bearer mindgrapes',
+    const response = await fetch(
+      'https://thingproxy.freeboard.io/fetch/https://postman-echo.com/post',
+      {
+        method: 'POST',
+        headers: {
+          Authorization: 'Bearer mindgrapes',
+        },
+        body: formData,
       },
-      body: formData,
-    });
+    );
 
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
 
     const result = await response.json();
-    console.log(result);
+    console.log('Upload Response:', result);
   } catch (error) {
     console.error('Upload Failed:', error);
   }
