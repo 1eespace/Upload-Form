@@ -1,3 +1,8 @@
+/* ============================= */
+/* Drop File Upload Component CSS */
+/* ============================= */
+
+/* Container for file drop area */
 .drop-file {
   position: relative;
   width: 400px;
@@ -11,6 +16,7 @@
 }
 
 .drop-file input {
+  /* Hide the default file input */
   opacity: 0;
   position: absolute;
   top: 0;
@@ -20,6 +26,7 @@
   cursor: pointer;
 }
 
+/* Hover effect for file drop area */
 .drop-file:hover,
 .drop-file-input.dragover {
   opacity: 0.6;
@@ -29,6 +36,10 @@
   margin-bottom: 20px;
   text-align: center;
 }
+
+/* ============================= */
+/* Drag & Drop Box Styling */
+/* ============================= */
 
 /* Drop file box */
 .drop-file-box {
@@ -40,14 +51,18 @@
 .drop-file-box img {
   width: 100px;
 }
+/* Text inside the drag-and-drop box */
 
 .drop-file-box__label {
   color: var(--txt-color);
 }
-
 .drop-file-box__info {
   color: var(--txt-second-color);
 }
+
+/* ============================= */
+/* File Preview Section */
+/* ============================= */
 
 /* Drop file preview */
 .drop-file-preview__text {
@@ -59,6 +74,7 @@
   border-bottom: 2px solid var(--element-grey-color);
 }
 
+/* Previewing the uploaded files */
 .drop-file-preview {
   margin-top: 30px;
   padding: 15px;
@@ -75,6 +91,7 @@
   padding-top: 30px;
 }
 
+/* Custom scrollbar for file preview */
 .drop-file-preview::-webkit-scrollbar {
   width: 6px;
 }
@@ -84,6 +101,11 @@
   border-radius: 3px;
 }
 
+/* ============================= */
+/* Individual File Items */
+/* ============================= */
+
+/* Each uploaded file item */
 .drop-file-preview__item {
   position: relative;
   display: flex;
@@ -109,6 +131,7 @@
 }
 
 .drop-file-preview__item:hover {
+  /* Hover effect for file items */
   background-color: var(--element-grey-color);
 }
 
@@ -129,6 +152,7 @@
   text-overflow: ellipsis;
 }
 
+/* Delete button (🗑️ icon) styling */
 .drop-file-preview__item__del {
   background-color: var(--box-bg);
   width: 40px;
@@ -147,9 +171,15 @@
 }
 
 .drop-file-preview__item__del:hover {
+  /* Hover effect for delete button */
   transform: translateY(-50%) scale(1.1);
 }
 
+/* ============================= */
+/* Upload Progress Bar */
+/* ============================= */
+
+/* Progress bar container */
 .upload-progress {
   margin-top: 15px;
   text-align: left;
@@ -180,6 +210,7 @@
   text-decoration: underline;
 }
 
+/* Error messages for invalid files */
 .error-message {
   color: var(--error-message);
   font-size: 14px;
@@ -187,12 +218,17 @@
   text-align: center;
 }
 
+/* Upload button styling */
 .upload-button {
   margin-top: 20px;
 }
 
-/* Small screens */
+/* ============================= */
+/* Responsive Design (Mobile) */
+/* ============================= */
+
 @media screen and (max-width: 480px) {
+  /* Adjust form container for small screens */
   .upload-form-container {
     width: 95%;
     padding: 10px;

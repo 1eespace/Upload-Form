@@ -23,7 +23,7 @@ const DropFileInput = (props) => {
   const [uploadProgress, setUploadProgress] = useState(0);
   const [errorMessage, setErrorMessage] = useState('');
 
-  // Drag event handling
+  // Handles drag-over events
   const onDragEnter = (event) => {
     event.preventDefault();
     wrapperRef.current.classList.add('dragover');
@@ -42,7 +42,7 @@ const DropFileInput = (props) => {
     handleFiles(droppedFiles);
   };
 
-  // Add files function
+  // Handles file selection and filtering
   const handleFiles = (newFiles) => {
     let validFiles = newFiles.filter((file) =>
       ALLOWED_FILE_TYPES.includes(file.type),
@@ -85,7 +85,7 @@ const DropFileInput = (props) => {
     }, 500);
   };
 
-  // Delete file function
+  // Removes a file from the list
   const fileRemove = (file) => {
     const updatedList = fileList.filter((item) => item !== file);
     setFileList(updatedList);
@@ -95,6 +95,7 @@ const DropFileInput = (props) => {
   return (
     <div className="upload-form-container">
       <h2 className="form-name">Upload Hub</h2>
+      {/* Drag and Drop Box */}
       <div
         ref={wrapperRef}
         className="drop-file"
@@ -124,7 +125,7 @@ const DropFileInput = (props) => {
           hidden
         />
       </div>
-
+      {/* Error Message Display */}
       {errorMessage && <p className="error-message">{errorMessage}</p>}
 
       {uploadProgress > 0 && uploadProgress < 100 && (
@@ -141,7 +142,7 @@ const DropFileInput = (props) => {
           </div>
         </div>
       )}
-
+      {/* Uploaded Files Preview */}
       {fileList.length > 0 && (
         <>
           <p className="drop-file-preview__text">Uploaded</p>
@@ -160,7 +161,7 @@ const DropFileInput = (props) => {
           </div>
         </>
       )}
-
+      {/* Upload Button */}
       {fileList.length > 0 && (
         <button
           className="upload-button"
