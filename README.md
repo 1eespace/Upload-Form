@@ -7,6 +7,7 @@ This project is a **React-based drag-and-drop file upload system**.
 ## 📌 Features
 
 ✅ **Drag & Drop File Upload**  
+<img width="532" alt="Image" src="https://github.com/user-attachments/assets/7529e095-e77c-4da7-9ba8-a9a93de81104" />
 ✅ **Supports multiple file selection**  
 ✅ **Allowed file types:** `JPEG, JPG, PNG, GIF, MP4, PDF, PSD, AI, Word, PPT`  
 ✅ **Prevents duplicate file uploads**  
