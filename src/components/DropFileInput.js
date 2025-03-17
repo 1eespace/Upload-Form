@@ -87,6 +87,12 @@ const DropFileInput = (props) => {
 
   // Removes a file from the list
   const fileRemove = (file) => {
+    // Confirm for deleting the files
+    const isConfirmed = window.confirm(
+      `Are you sure you want to delete "${file.name}"?`,
+    );
+    if (!isConfirmed) return;
+
     const updatedList = fileList.filter((item) => item !== file);
     setFileList(updatedList);
     props.onFileChange(updatedList);
